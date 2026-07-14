@@ -20,7 +20,7 @@ A brief overview of what I do and where I bring the most value. I have been buil
 
 ### AI
 
-I use AI daily as a practical tool — to clear repetitive work, sharpen JSDoc and TypeScript, and occasionally sanity-check logic I am unsure about. It speeds me up; it does not replace understanding the problem or owning the code.
+I use AI daily, both as a helper in my day-to-day flow and as a practical tool — to clear repetitive work, sharpen JSDoc and TypeScript, and occasionally sanity-check logic I am unsure about. It does speed me up; it does not replace understanding the problem or owning the code.
 
 As a web platform person first, I follow and experiment with **in-browser AI**: the [Chrome built-in AI APIs](https://developer.chrome.com/docs/ai/built-in/overview), streaming and worker patterns, and how those pieces fit alongside runtimes such as [PyScript](https://pyscript.net/).
 
@@ -53,6 +53,8 @@ I have a solid grasp of SQL security (including injection prevention), schema de
 
 I have used Linux as my daily driver for 12+ years. I can configure kiosk-style applications on SBCs such as Raspberry Pi, and I am comfortable with nginx, Cloudflare Workers, Deno, Bun, Node, PHP, and other web-server stacks.
 
+![B.E.N.J.A. Bootable Electron NodeJS Application](./assets/images/benja.jpeg)
+
 I work regularly with load balancing, threading, connection pools, concurrency, async pipelines, HTTP semantics, cookies, sessions, headers, CORS, cross-origin isolation, Content Security Policy, and related concerns.
 
 For web- and socket-oriented backend work, I can usually ramp up on a codebase quickly and contribute meaningfully.
@@ -69,10 +71,10 @@ My strength is core engineering rather than UI polish. That said, I have handled
 
 Languages I am most productive in today. Omitted: those I can read and write but would not highlight, or have not used in production. Java is the exception — I have shipped it in production, but it is not where I would point someone looking for deep expertise.
 
-- **JavaScript** — A language I have worked with for a long time, including contributions to the ECMAScript standard and libraries used widely in production. I care about performance, minimal overhead, and understanding the runtime (including GC behavior) rather than piling on abstractions.
+- **JavaScript** — A language I have worked with for a long time, including contributions to the TC39/ECMAScript standard and libraries used widely in production. I care about performance, minimal overhead, and understanding the runtime (including GC behavior) rather than piling on abstractions.
 - **TypeScript** — Effectively an extension of my JS workflow: JSDoc, `.d.ts` authoring, and TS where it earns its keep. I reach for it when types help; I also know where the type system hits its limits (e.g. Proxies).
 - **PHP** — Zend Certified Engineer (through 5.x), with many years of production use. Still current on modern PHP; I maintain *[flatted](https://github.com/WebReflection/flatted)*, which also has a PHP port: [![Downloads](https://img.shields.io/npm/dm/flatted.svg)](https://www.npmjs.com/package/flatted)
-- **Python** — Studied in a CS context, then deepened over three years at Anaconda Inc. across CPython and MicroPython — including IoT delivery with Tufts University (Bluetooth, WebSockets, serial) for robotics-related work.
+- **Python** — Studied in a CS context, then deepened over three years at Anaconda Inc. across CPython and MicroPython — including IoT delivery with Tufts University (Bluetooth, WebSockets, serial) for robotics-related work. I have contributed to [PEP750](https://peps.python.org/pep-0750/#acknowledgements) and [PEP818](https://peps.python.org/pep-0818/#acknowledgments) too.
 
 
 ### Notable previous work
