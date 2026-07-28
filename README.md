@@ -5,7 +5,7 @@
 Also at [webreflection.github.io/about](https://webreflection.github.io/about/) — feedback welcome via [GitHub](https://github.com/WebReflection/about).
 
   * **Role:** Principal Software Engineer
-  * **Location:** Italy
+  * **Location:** Italy (currently working remotely 100%)
 
   * **GitHub:** [https://github.com/WebReflection/](https://github.com/WebReflection/)
   * **Blog:** [https://webreflection.medium.com/](https://webreflection.medium.com/)
@@ -15,6 +15,16 @@ Also at [webreflection.github.io/about](https://webreflection.github.io/about/) 
 ---
 
 A brief overview of what I do and where I bring the most value. I have been building software professionally for over 25 years, across databases, backends, frontends, and several languages. I tend to work on core infrastructure, performance, and hard problems rather than visual design — though I am comfortable across the full stack when the project needs it.
+
+
+
+### Showcases
+
+Hands-on demos at the intersection of the web platform, IoT, and embedded UIs:
+
+- **PyScript + MicroPython (WASM)** driving a LEGO Spike Prime over Web Bluetooth — remote API orchestration I wrote end to end, with a Three.js view tracking the device axes in near real time: [video](https://www.youtube.com/watch?v=T_6Oh5VjX68)
+- **Electron kiosk on Raspberry Pi** — bootstrapping a kiosk via simple, configurable CLI commands ([B.E.N.J.A.](https://x.com/WebReflection/status/759868175534157824))
+- **Raspberry Pi Zero + LCD** — a display driven from a web UI over an intranet: [demo](https://x.com/WebReflection/status/1678762388538155013)
 
 
 
@@ -33,7 +43,7 @@ On local hardware (a **DGX Spark** and an **AMD Ryzen AI MAX+ 395**), I contribu
 
 I have also been working on **agent-style integration** — MCP servers, tool routing, and similar protocols — connecting models to applications and backends without leaning on heavy frameworks.
 
-PyScript has not had a strict AI mandate, but this is the field I am most drawn to right now: as a user, a tinkerer, and a builder. I would not claim a long production résumé in AI — the space moves too fast for that label to age well — but I am contributing in the open, shipping experiments, and ramping up deliberately.
+[PyScript](https://pyscript.net/) — which I maintain — has not had a strict AI mandate, but this is the field I am most drawn to right now: as a user, a tinkerer, and a builder. I would not claim a long production résumé in AI — the space moves too fast for that label to age well — but I am contributing in the open, shipping experiments, and ramping up deliberately.
 
 
 
@@ -59,22 +69,27 @@ I work regularly with load balancing, threading, connection pools, concurrency, 
 
 For web- and socket-oriented backend work, I can usually ramp up on a codebase quickly and contribute meaningfully.
 
+
+
 ### Frontend
 
 I have been writing HTML, CSS, and client-side JavaScript since before "full stack" was a job title. I would not call myself a designer, but I am at home with libraries, frameworks, utilities, performance tuning, architectural patterns, and security on the client.
 
 Beyond the browser, I have built and shipped desktop applications with **Electron**, **Tauri**, **Positron**, and similar stacks — web UIs in native shells. I am comfortable with their process models, IPC between renderer and main, packaging, updates, and wiring the client to local or remote backends.
 
-My strength is core engineering rather than UI polish. That said, I have handled demanding frontend problems in production — including work on [PyScript](https://pyscript.net/), where we had to solve problems that did not have off-the-shelf answers.
+My strength is core engineering rather than UI polish. That said, I have handled demanding frontend problems in production — including as a [PyScript](https://pyscript.net/) maintainer, where we had to solve problems that did not have off-the-shelf answers.
+
+
 
 ### Programming Languages
 
-Languages I am most productive in today. Omitted: those I can read and write but would not highlight, or have not used in production. Java is the exception — I have shipped it in production, but it is not where I would point someone looking for deep expertise.
+Languages I am most productive in today. Omitted: languages I can read and write but would not lead with — including C, C++, and Rust — and languages I have not used in production. Java is the exception: I have shipped it in production, but it is not where I would claim deep expertise.
 
 - **JavaScript** — A language I have worked with for a long time, including contributions to the TC39/ECMAScript standard and libraries used widely in production. I care about performance, minimal overhead, and understanding the runtime (including GC behavior) rather than piling on abstractions.
 - **TypeScript** — Effectively an extension of my JS workflow: JSDoc, `.d.ts` authoring, and TS where it earns its keep. I reach for it when types help; I also know where the type system hits its limits (e.g. Proxies).
 - **PHP** — Zend Certified Engineer (through 5.x), with many years of production use. Still current on modern PHP; I maintain *[flatted](https://github.com/WebReflection/flatted)*, which also has a PHP port: [![Downloads](https://img.shields.io/npm/dm/flatted.svg)](https://www.npmjs.com/package/flatted)
-- **Python** — Studied in a CS context, then deepened over three years at Anaconda Inc. across CPython and MicroPython — including IoT delivery with Tufts University (Bluetooth, WebSockets, serial) for robotics-related work. I have contributed to [PEP750](https://peps.python.org/pep-0750/#acknowledgements) and [PEP818](https://peps.python.org/pep-0818/#acknowledgments) too.
+- **Python** — Studied in a CS context, then deepened over the years at Anaconda Inc. across CPython and MicroPython — including IoT delivery with Tufts University (Bluetooth, WebSockets, serial) for robotics-related work. I have also contributed to [PEP 750](https://peps.python.org/pep-0750/#acknowledgements) and [PEP 818](https://peps.python.org/pep-0818/#acknowledgments).
+
 
 
 ### Notable previous work
