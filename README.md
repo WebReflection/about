@@ -88,7 +88,7 @@ Languages I am most productive in today. Omitted: languages I can read and write
 - **JavaScript** — A language I have worked with for a long time, including contributions to the TC39/ECMAScript standard and libraries used widely in production. I care about performance, minimal overhead, and understanding the runtime (including GC behavior) rather than piling on abstractions.
 - **TypeScript** — Effectively an extension of my JS workflow: JSDoc, `.d.ts` authoring, and TS where it earns its keep. I reach for it when types help; I also know where the type system hits its limits (e.g. Proxies).
 - **PHP** — Zend Certified Engineer (through 5.x), with many years of production use. Still current on modern PHP; I maintain *[flatted](https://github.com/WebReflection/flatted)*, which also has a PHP port: [![Downloads](https://img.shields.io/npm/dm/flatted.svg)](https://www.npmjs.com/package/flatted)
-- **Python** — Studied in a CS context, then deepened over the years at Anaconda Inc. across CPython and MicroPython — including IoT delivery with Tufts University (Bluetooth, WebSockets, serial) for robotics-related work. I have also contributed to [PEP 750](https://peps.python.org/pep-0750/#acknowledgements) and [PEP 818](https://peps.python.org/pep-0818/#acknowledgments).
+- **Python** — Studied in a CS context, then deepened over the years at Anaconda Inc. across CPython and MicroPython — including IoT delivery with Tufts University (Bluetooth, WebSockets, serial) for robotics-related work. I have also contributed to [PEP 750](https://peps.python.org/pep-0750/#acknowledgements) — including creating the first version of [tdom](https://github.com/t-strings/tdom) — and [PEP 818](https://peps.python.org/pep-0818/#acknowledgments).
 
 
 
