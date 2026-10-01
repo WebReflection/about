@@ -36,7 +36,7 @@ I also use AI daily in my own flow: to clear repetitive work, sharpen JSDoc and 
 
 As a web platform person first, I follow and experiment with **in-browser AI**: the [Chrome built-in AI APIs](https://developer.chrome.com/docs/ai/built-in/overview), streaming and worker patterns, and how those pieces fit alongside runtimes such as [PyScript](https://pyscript.net/).
 
-On local hardware (multiple **DGX Spark** and **AMD Ryzen AI MAX+ 395** machines), I contributed improvements to [DwarfStar 4](https://github.com/antirez/ds4) so models can run on a machine or as an intranet service. That work grew into [DS4 Chat](https://github.com/WebReflection/ds4-chat):
+On local hardware (multiple **DGX Spark** and **AMD Ryzen AI MAX+ 395** machines), I contributed to [DwarfStar 4](https://github.com/antirez/ds4/pull/94) _(PR mentioned [in here](https://github.com/espentrydal/ds4/commit/f66101181f4cee828830d749d939b3765db7cf14))_ so models can run on a machine or as an intranet service. That work grew into [DS4 Chat](https://github.com/WebReflection/ds4-chat):
 
 - A minimal, reactive take on the usual llama.cpp-style UI
 - Generator queues, persistent JSON storage, async streaming, highlighting, and related plumbing following current best practices
