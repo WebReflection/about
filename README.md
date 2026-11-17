@@ -1,11 +1,12 @@
 # Andrea Giammarchi
 
-*Core web platform engineer · performance, security, and the full stack · 25+ years hands-on*
+*Core web platform engineer · performance, security, and the full stack · 25+ years hands-on · daily AI user*
 
 Also at [webreflection.github.io/about](https://webreflection.github.io/about/) — feedback welcome via [GitHub](https://github.com/WebReflection/about).
 
   * **Role:** Principal Software Engineer - Core developer at [Kilo](https://kilo.ai/)
   * **Location:** Italy (currently working remotely 100%)
+  * **AI:** daily user — frontier-to-small models via [Kilo](https://kilo.ai/) at work; my own switchless 4× DGX Spark for experiments
 
   * **GitHub:** [https://github.com/WebReflection/](https://github.com/WebReflection/)
   * **Blog:** [https://webreflection.medium.com/](https://webreflection.medium.com/)
@@ -30,13 +31,13 @@ Hands-on demos at the intersection of the web platform, IoT, and embedded UIs:
 
 ### AI
 
-I work at the core of [Kilo](https://kilo.ai/), the open-source AI coding agent — on the product and the platform behind it.
+I use AI every day, hands-on. For work, I am at the core of [Kilo](https://kilo.ai/), the open-source AI coding agent, where I use the many models it offers, from frontier to small, every day. Outside work, I run my own switchless 4× **DGX Spark** for experiments and AI tests, driving it through Kilo, OpenCode, or other harnesses depending on the task.
 
-I also use AI daily in my own flow: to clear repetitive work, sharpen JSDoc and TypeScript, and occasionally sanity-check logic I am unsure about. It speeds me up; it does not replace understanding the problem or owning the code. On my own OSS I stay close to every line. On Kilo, I use the full potential of agents to move the project forward faster.
+AI makes me faster and helps me produce better tests and docs: it clears repetitive work, sharpens JSDoc and TypeScript, and lets me sanity-check logic I am unsure about. But I can still write code without it — on my own OSS I stay close to every line and own what ships. AI does not replace understanding the problem; it removes the friction between understanding it and proving it with tests and documentation. At work, I use the full potential of agents to move the project forward faster.
 
 As a web platform person first, I follow and experiment with **in-browser AI**: the [Chrome built-in AI APIs](https://developer.chrome.com/docs/ai/built-in/overview), streaming and worker patterns, and how those pieces fit alongside runtimes such as [PyScript](https://pyscript.net/).
 
-On local hardware (multiple **DGX Spark** and **AMD Ryzen AI MAX+ 395** machines), I contributed to [DwarfStar 4](https://github.com/antirez/ds4/pull/94) _(PR mentioned [in here](https://github.com/espentrydal/ds4/commit/f66101181f4cee828830d749d939b3765db7cf14))_ so models can run on a machine or as an intranet service. That work grew into [DS4 Chat](https://github.com/WebReflection/ds4-chat):
+On my local hardware — including the **DGX Spark** setup above and **AMD Ryzen AI MAX+ 395** machines — I contributed to [DwarfStar 4](https://github.com/antirez/ds4/pull/94) _(PR mentioned [in here](https://github.com/espentrydal/ds4/commit/f66101181f4cee828830d749d939b3765db7cf14))_ so models can run on a machine or as an intranet service. That work grew into [DS4 Chat](https://github.com/WebReflection/ds4-chat):
 
 - A minimal, reactive take on the usual llama.cpp-style UI
 - Generator queues, persistent JSON storage, async streaming, highlighting, and related plumbing following current best practices

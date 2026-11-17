@@ -19,6 +19,8 @@
   --syntax-string: #0a3069;
   --syntax-variable: #953800;
   --theme-icon: "😎";
+  --aurora-light: 1;
+  --aurora-dark: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,6 +42,8 @@
     --syntax-string: #a5d6ff;
     --syntax-variable: #ffa657;
     --theme-icon: "🙂";
+    --aurora-light: 0;
+    --aurora-dark: 1;
   }
 }
 
@@ -61,6 +65,8 @@
   --syntax-string: #0a3069;
   --syntax-variable: #953800;
   --theme-icon: "😎";
+  --aurora-light: 1;
+  --aurora-dark: 0;
 }
 
 [data-theme="dark"] {
@@ -81,6 +87,70 @@
   --syntax-string: #a5d6ff;
   --syntax-variable: #ffa657;
   --theme-icon: "🙂";
+  --aurora-light: 0;
+  --aurora-dark: 1;
+}
+
+.site-backdrop {
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+}
+
+.site-backdrop::before,
+.site-backdrop::after {
+  content: "";
+  inset: -30%;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity .6s ease;
+}
+
+.site-backdrop::before {
+  animation: aurora-drift-a 32s ease-in-out infinite alternate;
+  animation-delay: -9s;
+  background:
+    radial-gradient(42% 46% at 30% 30%, rgba(9, 105, 218, .17), transparent 70%),
+    radial-gradient(36% 40% at 72% 24%, rgba(130, 80, 223, .13), transparent 68%),
+    radial-gradient(48% 52% at 54% 74%, rgba(14, 118, 106, .09), transparent 72%);
+  opacity: var(--aurora-light);
+}
+
+.site-backdrop::after {
+  animation: aurora-drift-b 46s ease-in-out infinite alternate;
+  animation-delay: -19s;
+  background:
+    radial-gradient(42% 46% at 26% 36%, rgba(88, 166, 255, .22), transparent 70%),
+    radial-gradient(36% 40% at 76% 30%, rgba(210, 168, 255, .17), transparent 68%),
+    radial-gradient(48% 52% at 58% 70%, rgba(57, 211, 190, .13), transparent 72%);
+  opacity: var(--aurora-dark);
+}
+
+@keyframes aurora-drift-a {
+  from { transform: translate3d(-5%, -2%, 0) rotate(-3deg) scale(1.02); }
+  to { transform: translate3d(5%, 4%, 0) rotate(5deg) scale(1.12); }
+}
+
+@keyframes aurora-drift-b {
+  from { transform: translate3d(3%, 3%, 0) rotate(4deg) scale(1.12); }
+  to { transform: translate3d(-5%, -4%, 0) rotate(-5deg) scale(1.02); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-backdrop::before,
+  .site-backdrop::after {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (update: slow) {
+  .site-backdrop::before,
+  .site-backdrop::after {
+    animation: none;
+  }
 }
 
 * {
@@ -134,6 +204,8 @@ a:hover {
   margin: 0 auto;
   max-width: 920px;
   padding: 24px;
+  position: relative;
+  z-index: 1;
 }
 
 .site-header,
@@ -191,11 +263,16 @@ a:hover {
 }
 
 .content {
-  background: var(--background);
+  background: transparent;
 }
 
 .content > :first-child {
   margin-top: 0;
+}
+
+/* Keep the README's self-reference on GitHub, hide it on the published page. */
+.content p:has(a[href*="webreflection.github.io/about"]) {
+  display: none;
 }
 
 h1,
@@ -384,5 +461,42 @@ img {
 
   .site-nav {
     justify-content: flex-start;
+  }
+}
+
+@media print {
+  :root {
+    color-scheme: light;
+    --background: #ffffff;
+    --surface: #f7f7f8;
+    --text: #1f2328;
+    --muted: #636c76;
+    --border: #d8dee4;
+    --link: #0969da;
+    --code: #f6f8fa;
+    --shadow: none;
+    --syntax-comment: #6e7781;
+    --syntax-constant: #0550ae;
+    --syntax-entity: #8250df;
+    --syntax-keyword: #cf222e;
+    --syntax-storage: #953800;
+    --syntax-string: #0a3069;
+    --syntax-variable: #953800;
+    --theme-icon: "😎";
+  }
+
+  html,
+  body {
+    background: #fff;
+    color-scheme: light;
+  }
+
+  .site-header,
+  .site-backdrop {
+    display: none !important;
+  }
+
+  .content img {
+    display: none !important;
   }
 }
