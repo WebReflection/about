@@ -19,6 +19,8 @@
   --syntax-string: #0a3069;
   --syntax-variable: #953800;
   --theme-icon: "😎";
+  --backdrop-light: 1;
+  --backdrop-dark: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,6 +42,8 @@
     --syntax-string: #a5d6ff;
     --syntax-variable: #ffa657;
     --theme-icon: "🙂";
+    --backdrop-light: 0;
+    --backdrop-dark: 1;
   }
 }
 
@@ -61,6 +65,8 @@
   --syntax-string: #0a3069;
   --syntax-variable: #953800;
   --theme-icon: "😎";
+  --backdrop-light: 1;
+  --backdrop-dark: 0;
 }
 
 [data-theme="dark"] {
@@ -81,16 +87,58 @@
   --syntax-string: #a5d6ff;
   --syntax-variable: #ffa657;
   --theme-icon: "🙂";
+  --backdrop-light: 0;
+  --backdrop-dark: 1;
 }
 
-.site-backdrop {
-  display: block;
-  height: 100%;
+.site-backdrop,
+.site-grain {
   inset: 0;
   pointer-events: none;
   position: fixed;
-  width: 100%;
   z-index: 0;
+}
+
+.site-backdrop {
+  overflow: hidden;
+}
+
+.site-backdrop::before,
+.site-backdrop::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+  transition: opacity .4s ease;
+}
+
+.site-backdrop::before {
+  background:
+    radial-gradient(55% 50% at 12% 8%, rgba(70, 100, 140, .09), transparent 72%),
+    radial-gradient(45% 45% at 92% 18%, rgba(140, 120, 100, .05), transparent 70%),
+    radial-gradient(60% 55% at 78% 92%, rgba(80, 120, 110, .05), transparent 74%);
+  opacity: var(--backdrop-light);
+}
+
+.site-backdrop::after {
+  background:
+    radial-gradient(55% 50% at 14% 10%, rgba(100, 150, 210, .1), transparent 72%),
+    radial-gradient(45% 45% at 88% 20%, rgba(180, 160, 140, .05), transparent 70%),
+    radial-gradient(60% 55% at 76% 90%, rgba(80, 170, 160, .055), transparent 74%);
+  opacity: var(--backdrop-dark);
+}
+
+.site-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  opacity: .05;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-backdrop::before,
+  .site-backdrop::after {
+    transition: none;
+  }
 }
 
 * {
@@ -423,6 +471,8 @@ img {
     --syntax-string: #0a3069;
     --syntax-variable: #953800;
     --theme-icon: "😎";
+  --backdrop-light: 1;
+  --backdrop-dark: 0;
   }
 
   html,
@@ -432,7 +482,8 @@ img {
   }
 
   .site-header,
-  .site-backdrop {
+  .site-backdrop,
+  .site-grain {
     display: none !important;
   }
 

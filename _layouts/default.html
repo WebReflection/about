@@ -22,13 +22,11 @@
       dataset.theme = next;
       localStorage.setItem(key, next);
     });
-
-    // Lazy background constellation.
-    import('{{ "/assets/js/constellation.js" | relative_url }}');
   </script>
 </head>
 <body>
-  <canvas class="site-backdrop" aria-hidden="true"></canvas>
+  <div class="site-backdrop" aria-hidden="true"></div>
+  <div class="site-grain" aria-hidden="true"></div>
 
   <div class="site">
     <header class="site-header">
