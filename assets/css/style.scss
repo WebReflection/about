@@ -19,8 +19,6 @@
   --syntax-string: #0a3069;
   --syntax-variable: #953800;
   --theme-icon: "😎";
-  --aurora-light: 1;
-  --aurora-dark: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,8 +40,6 @@
     --syntax-string: #a5d6ff;
     --syntax-variable: #ffa657;
     --theme-icon: "🙂";
-    --aurora-light: 0;
-    --aurora-dark: 1;
   }
 }
 
@@ -65,8 +61,6 @@
   --syntax-string: #0a3069;
   --syntax-variable: #953800;
   --theme-icon: "😎";
-  --aurora-light: 1;
-  --aurora-dark: 0;
 }
 
 [data-theme="dark"] {
@@ -87,70 +81,16 @@
   --syntax-string: #a5d6ff;
   --syntax-variable: #ffa657;
   --theme-icon: "🙂";
-  --aurora-light: 0;
-  --aurora-dark: 1;
 }
 
 .site-backdrop {
+  display: block;
+  height: 100%;
   inset: 0;
-  overflow: hidden;
   pointer-events: none;
   position: fixed;
+  width: 100%;
   z-index: 0;
-}
-
-.site-backdrop::before,
-.site-backdrop::after {
-  content: "";
-  inset: -30%;
-  pointer-events: none;
-  position: absolute;
-  transition: opacity .6s ease;
-}
-
-.site-backdrop::before {
-  animation: aurora-drift-a 32s ease-in-out infinite alternate;
-  animation-delay: -9s;
-  background:
-    radial-gradient(42% 46% at 30% 30%, rgba(9, 105, 218, .17), transparent 70%),
-    radial-gradient(36% 40% at 72% 24%, rgba(130, 80, 223, .13), transparent 68%),
-    radial-gradient(48% 52% at 54% 74%, rgba(14, 118, 106, .09), transparent 72%);
-  opacity: var(--aurora-light);
-}
-
-.site-backdrop::after {
-  animation: aurora-drift-b 46s ease-in-out infinite alternate;
-  animation-delay: -19s;
-  background:
-    radial-gradient(42% 46% at 26% 36%, rgba(88, 166, 255, .22), transparent 70%),
-    radial-gradient(36% 40% at 76% 30%, rgba(210, 168, 255, .17), transparent 68%),
-    radial-gradient(48% 52% at 58% 70%, rgba(57, 211, 190, .13), transparent 72%);
-  opacity: var(--aurora-dark);
-}
-
-@keyframes aurora-drift-a {
-  from { transform: translate3d(-5%, -2%, 0) rotate(-3deg) scale(1.02); }
-  to { transform: translate3d(5%, 4%, 0) rotate(5deg) scale(1.12); }
-}
-
-@keyframes aurora-drift-b {
-  from { transform: translate3d(3%, 3%, 0) rotate(4deg) scale(1.12); }
-  to { transform: translate3d(-5%, -4%, 0) rotate(-5deg) scale(1.02); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .site-backdrop::before,
-  .site-backdrop::after {
-    animation: none;
-    transition: none;
-  }
-}
-
-@media (update: slow) {
-  .site-backdrop::before,
-  .site-backdrop::after {
-    animation: none;
-  }
 }
 
 * {
